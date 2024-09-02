@@ -1,0 +1,58 @@
+name: cafe_test
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  ###
+  flutter_bloc: ^8.1.6
+  go_router: ^14.2.0
+  shared_preferences: ^2.2.3
+  flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  dio: ^5.6.0
+  date_picker_plus: ^4.1.0
+  pie_chart: ^5.4.0
+  ###
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+    - family: InterM
+      fonts:
+        - asset: assets/fonts/Inter-Medium.ttf
+    - family: InterB
+      fonts:
+        - asset: assets/fonts/Inter-Bold.ttf
+    - family: InterBB
+      fonts:
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+    - family: MontserratM
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+    - family: MontserratB
+      fonts:
+        - asset: assets/fonts/Montserrat-Bold.ttf
+    - family: MontserratBB
+      fonts:
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf

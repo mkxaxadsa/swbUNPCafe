@@ -1,0 +1,1 @@
+ /Users/kilxsx/Downloads/cafe_test-main/.dart_tool/flutter_build/84b9f113039f4d641167bb1565d2ad1e/native_assets.yaml: 
