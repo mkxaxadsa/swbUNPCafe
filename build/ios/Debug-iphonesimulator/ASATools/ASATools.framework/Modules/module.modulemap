@@ -1,0 +1,11 @@
+framework module ASATools {
+  umbrella header "ASATools-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ASATools.Swift {
+  header "ASATools-Swift.h"
+  requires objc
+}

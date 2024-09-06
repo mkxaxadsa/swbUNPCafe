@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:appsflyer_sdk/appsflyer_sdk.dart';
@@ -31,23 +33,31 @@ bool _isFirstLaunch = false;
 String _afStatus = '';
 String _campaign = '';
 String _campaignId = '';
+
+Future<void> initializeAppTrackingTransparency() async {
+  final TrackingStatus currentStatus =
+      await AppTrackingTransparency.trackingAuthorizationStatus;
+  print(currentStatus);
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AppTrackingTransparency.requestTrackingAuthorization();
+  await initializeAppTrackingTransparency();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseRemoteConfig.instance.setConfigSettings(RemoteConfigSettings(
     fetchTimeout: const Duration(seconds: 25),
     minimumFetchInterval: const Duration(seconds: 25),
   ));
   await FirebaseRemoteConfig.instance.fetchAndActivate();
-  await nfjksdfjkdsf();
+
   inidasd();
   await initHive();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(const MyApp());
+
+  runApp(MyApp());
 }
 
 void inidasd() async {
@@ -115,14 +125,8 @@ void inidasd() async {
   );
 }
 
-Future<void> nfjksdfjkdsf() async {
-  final TrackingStatus status =
-      await AppTrackingTransparency.requestTrackingAuthorization();
-  print(status);
-}
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
