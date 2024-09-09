@@ -37,7 +37,17 @@ String _campaignId = '';
 Future<void> initializeAppTrackingTransparency() async {
   final TrackingStatus currentStatus =
       await AppTrackingTransparency.trackingAuthorizationStatus;
-  print(currentStatus);
+
+  if (currentStatus == TrackingStatus.notDetermined) {
+    // Wait for the app to become active before requesting permission
+    await Future.delayed(const Duration(seconds: 1));
+    // Request tracking authorization
+    final TrackingStatus status =
+        await AppTrackingTransparency.requestTrackingAuthorization();
+    print(status);
+  } else {
+    print(currentStatus);
+  }
 }
 
 void main() async {

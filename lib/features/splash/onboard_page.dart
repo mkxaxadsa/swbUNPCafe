@@ -1,3 +1,4 @@
+import 'package:cafe_test/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -9,8 +10,19 @@ import '../../core/widgets/custom_scaffold.dart';
 import '../../core/widgets/texts/text_e.dart';
 import '../../core/widgets/texts/text_r.dart';
 
-class OnboardPage extends StatelessWidget {
+class OnboardPage extends StatefulWidget {
   const OnboardPage({super.key});
+
+  @override
+  State<OnboardPage> createState() => _OnboardPageState();
+}
+
+class _OnboardPageState extends State<OnboardPage> {
+  @override
+  void initState() {
+    super.initState();
+    initializeAppTrackingTransparency();
+  }
 
   @override
   Widget build(BuildContext context) {

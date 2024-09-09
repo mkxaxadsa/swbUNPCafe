@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/config/app_colors.dart';
@@ -40,8 +39,8 @@ class NewsCard extends StatelessWidget {
                 width: double.infinity,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
-                  return CachedNetworkImage(
-                    imageUrl: news.image,
+                  return Image.network(
+                    news.image,
                     height: 158,
                     width: double.infinity,
                     fit: BoxFit.cover,

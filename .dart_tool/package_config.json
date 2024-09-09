@@ -645,7 +645,7 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/vm_service-14.2.4",
+      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/vm_service-14.2.5",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -674,10 +674,10 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-09-04T09:16:48.872773Z",
+  "generated": "2024-09-09T10:50:35.846910Z",
   "generator": "pub",
-  "generatorVersion": "3.5.0",
+  "generatorVersion": "3.5.2",
   "flutterRoot": "file:///Users/kilxsx/Documents/dev/flutter",
-  "flutterVersion": "3.24.0",
+  "flutterVersion": "3.24.2",
   "pubCache": "file:///Users/kilxsx/.pub-cache"
 }
