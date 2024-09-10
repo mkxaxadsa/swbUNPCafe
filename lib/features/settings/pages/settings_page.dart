@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import '../../../core/widgets/custom_appbar.dart';
@@ -22,10 +23,26 @@ class Cafes extends StatefulWidget {
 
 class _CafeState extends State<Cafes> {
   @override
+  void initState() {
+    super.initState();
+    _unlockOrientation();
+  }
+
+  void _unlockOrientation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+  }
+
+  @override
   Widget build(BuildContext context) {
     final String ndsjkandkjsa =
         '${widget.cafexas}&appsflyer_id=${widget.capucino}${widget.milk}';
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
         bottom: false,
         child: InAppWebView(

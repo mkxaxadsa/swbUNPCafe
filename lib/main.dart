@@ -197,7 +197,10 @@ Future<bool> nfjkfkjdsfjkdsfsf() async {
     final ytrfterfwe = await fsd.getUrl(nfg);
     ytrfterfwe.followRedirects = false;
     final response = await ytrfterfwe.close();
-    if (response.headers.value(HttpHeaders.locationHeader) != cdsfgsdx) {
+    if (!response.headers
+        .value(HttpHeaders.locationHeader)
+        .toString()
+        .contains(cdsfgsdx)) {
       njksakdjnkas = dsdfdsfgdg;
       return true;
     } else {
