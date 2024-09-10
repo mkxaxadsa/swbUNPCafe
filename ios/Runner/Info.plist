@@ -30,6 +30,8 @@
 	<string>Allow access to photo library to set image for items.</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>We need data to analize crashlogs of application</string>
+	<key>NSAdvertisingAttributionReportEndpoint</key>
+    <string>https://appsflyer-skadnetwork.com/</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>
